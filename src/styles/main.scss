@@ -1,7 +1,76 @@
-$font-size: 1rem;
-$font-color: orange;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$font-inter: 'Inter', sans-serif;
+
+$gray: #F3F2F0;
+$black: #232326;
+$red: #D40000;
+$white: #FFFFFF;
 
 html {
-    font-size: $font-size;
-    color: $font-color;
+    font-size: 10px;
+    
+}
+body {
+    color: $gray;
+    font-family: $font-inter;
+    font-size: 1.4rem;
+    background-color: $black;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto 6rem;
+    &__nav {
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        gap: 5rem;
+    }
+    &__navigation {
+        display: flex;
+    }
+    &__item {
+        cursor: pointer;
+        &:hover {
+            color: $red;
+            transition: 0.2s;
+        }
+    }
+    &__contact {
+        display: flex;
+        gap: 2.6rem;
+        justify-content: space-between;
+        align-items: center;
+        &__item {
+            text-decoration: none;
+            color: $gray;
+            display: flex;
+            align-items: center;
+            &:hover {
+                color: $red;
+                transition: 0.2s;
+            }
+            &::before {
+                content: "";
+                display: inline-block;
+                background: rgba($gray, 0.5);
+                width: 2px;
+                height: 2.4rem;
+                pointer-events: none;
+                position: relative;
+                left: -1.5rem;
+            }
+            &:nth-child(1)::before {
+                display: none;
+            }
+        }
+    }
 }
