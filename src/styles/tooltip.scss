@@ -1,0 +1,72 @@
+$red: #D40000;
+$gray: #F3F2F0;
+
+[tooltip][flow^="down"]::before {
+    top: 90%;
+    border-top-width: 0;
+    border-bottom-color: $red;
+  }
+  [tooltip][flow^="down"]::after {
+    top: calc(90% + 5px);
+  }
+  [tooltip][flow^="down"]::before,
+  [tooltip][flow^="down"]::after {
+    left: 50%;
+    transform: translate(-50%, .5em);
+  }
+@keyframes tooltips-vert {
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+   
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+    animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip] {
+  position: relative;
+  &::before,
+  &::after {
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      position: absolute;
+      display: none;
+      opacity: 0;
+  }
+  &::before {
+      content: '';
+      z-index: 1001;
+      border: 5px solid transparent;
+  }
+  &::after {
+      content: attr(tooltip);
+      z-index: 1000;
+      text-align: center;
+      /* 
+      Let the content set the size of the tooltips 
+      but this will also keep them from being obnoxious
+      */
+      width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre-wrap;
+      /* visible design of the tooltip bubbles */
+      padding: 3rem 1.5rem;
+      box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+      background: $red;
+      color: rgba($gray, 0.8);
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+  }
+  &:hover::before,
+  &:hover::after {
+      display: block;
+  }
+}
