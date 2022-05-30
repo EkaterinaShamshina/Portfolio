@@ -1,0 +1,48 @@
+$gray: #F3F2F0;
+$black: #232326;
+
+.custom-select {
+    &-opener {
+        background-color: rgba($gray, 0.1);
+        padding: 2.5rem;
+        color: $gray;
+        margin-bottom: 2rem;
+        height: 6.5rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::after {
+            content: '';
+            display: inline-block;
+            background-image: url(../images/arrowselect.svg);
+            height: 2rem;
+            width: 3rem;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &-panel {
+        background-color: $black;
+    }
+    &-option {
+        background-color: rgba($gray, 0.1);
+        cursor: pointer;
+        color: rgba($gray, 0.4);
+        padding-left: 2.5rem;
+        &:last-child {
+            padding-bottom: 1.7rem;
+        }
+    }
+}
+.custom-select-container.is-open .custom-select-panel {
+    overflow-y: hidden;
+}
+.custom-select-option.has-focus {
+    background-color: rgba($gray, 0.1);
+    color: $gray;
+}
+.custom-select-option.is-selected {
+    display: none;
+}

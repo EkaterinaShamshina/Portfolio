@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('../../node_modules/custom-select/build/custom-select.css');
 
 $font-inter: 'Inter', sans-serif;
 
@@ -178,7 +179,7 @@ body {
     }
     & img {
         width: 15px;
-        padding-left: 15px;
+        margin-left: 15px;
     }
 }
 .triangle {
@@ -596,7 +597,6 @@ body {
         }
         &:active {
             top: 3px;
-
         }
     }
 }
@@ -640,6 +640,4 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
     font-family: $font-inter;
 }
-
-
 
