@@ -70,6 +70,9 @@ body {
     gap: 2.2rem;
     justify-content: space-between;
     align-items: flex-end;
+    &__header {
+        align-items: center;
+    }
     &_heading {
         gap: 5.4rem;
         text-transform: capitalize;
