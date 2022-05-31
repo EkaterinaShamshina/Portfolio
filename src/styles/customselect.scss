@@ -16,7 +16,7 @@ $black: #232326;
         &::after {
             content: '';
             display: inline-block;
-            background-image: url(../images/arrowselect.svg);
+            background-image: url(/src/images/arrowselect.svg);
             height: 2rem;
             width: 3rem;
             background-repeat: no-repeat;
