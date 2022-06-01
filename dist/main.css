@@ -501,7 +501,7 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.contact__header {
+.contact__center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -720,7 +720,7 @@ body {
   font-size: 2.8rem;
   line-height: 4.1rem;
 }
-.item-name_l_uppercase {
+.item-name_uppercase {
   text-transform: uppercase;
 }
 .item-name_ls {
@@ -1021,10 +1021,16 @@ body {
   height: 9rem;
 }
 .rate-flex__item_contacts {
-  margin-top: 12rem;
+  margin-top: 4.3rem;
+  margin-bottom: 0;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #F3F2F0;
 }
 .rate-flex__item_contacts::after {
   display: none;
+}
+.rate-flex__item_form {
+  padding-bottom: 13rem;
 }
 .rate-flex__item_desc {
   max-width: 56rem;
@@ -1086,7 +1092,7 @@ body {
   color: rgba(243, 242, 240, 0.8);
 }
 .form__item {
-  margin-top: 2rem;
+  margin-top: 2.3rem;
 }
 .form__label {
   font-size: 1.2rem;
@@ -1278,9 +1284,9 @@ select:-webkit-autofill:focus {
   \*****************************************************************************************************************************************************************/
 .custom-select-opener {
   background-color: rgba(243, 242, 240, 0.1);
-  padding: 2.5rem;
+  padding: 2rem;
   color: #F3F2F0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   height: 6.5rem;
   font-size: 1.2rem;
   line-height: 1.8rem;
@@ -1293,6 +1299,17 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.custom-select-opener::after {
+  content: "";
+  display: inline-block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01LjQ2OTY3IDYuNTMwMzNDNS43NjI1NiA2LjgyMzIyIDYuMjM3NDQgNi44MjMyMiA2LjUzMDMzIDYuNTMwMzNMMTEuMzAzMyAxLjc1NzM2QzExLjU5NjIgMS40NjQ0NyAxMS41OTYyIDAuOTg5NTkzIDExLjMwMzMgMC42OTY2OTlDMTEuMDEwNCAwLjQwMzgwNiAxMC41MzU1IDAuNDAzODA2IDEwLjI0MjYgMC42OTY2OTlMNiA0LjkzOTM0TDEuNzU3MzYgMC42OTY2OTlDMS40NjQ0NyAwLjQwMzgwNiAwLjk4OTU5MyAwLjQwMzgwNiAwLjY5NjY5OSAwLjY5NjY5OUMwLjQwMzgwNiAwLjk4OTU5MiAwLjQwMzgwNiAxLjQ2NDQ3IDAuNjk2Njk5IDEuNzU3MzZMNS40Njk2NyA2LjUzMDMzWk01LjI1IDVMNS4yNSA2TDYuNzUgNkw2Ljc1IDVMNS4yNSA1WiIgZmlsbD0iI0YzRjJGMCIvPgo8L3N2Zz4K);
+  height: 2rem;
+  width: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 .custom-select-panel {
   background-color: #232326;
@@ -1316,6 +1333,7 @@ select:-webkit-autofill:focus {
   color: #F3F2F0;
 }
 
-.custom-select-option.is-selected {
-  display: none;
+.custom-select-container.is-open .custom-select-opener::after {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
 }

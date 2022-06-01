@@ -70,7 +70,7 @@ body {
     gap: 2.2rem;
     justify-content: space-between;
     align-items: flex-end;
-    &__header {
+    &__center {
         align-items: center;
     }
     &_heading {
@@ -277,9 +277,9 @@ body {
     &_l {
         font-size: 2.8rem;
         line-height: 4.1rem;
-        &_uppercase {
-            text-transform: uppercase;
-        }
+    }
+    &_uppercase {
+        text-transform: uppercase;
     }
     &_ls {
         letter-spacing: 0.03em;
@@ -514,10 +514,16 @@ body {
             }
         }
         &_contacts {
-            margin-top: 12rem;
+            margin-top: 4.3rem;
+            margin-bottom: 0;
+            padding-bottom: 6rem;
+            border-bottom: 1px solid $gray;
             &::after {
                 display: none;
             }
+        }
+        &_form {
+            padding-bottom: 13rem;
         }
         &_desc {
             max-width: 56rem;
@@ -558,7 +564,7 @@ body {
     flex-basis: 49%;
     color: rgba($gray, 0.8);
     &__item {
-        margin-top: 2rem;
+        margin-top: 2.3rem;
     }
     &__label {
         font-size: 1.2rem;

@@ -4,9 +4,9 @@ $black: #232326;
 .custom-select {
     &-opener {
         background-color: rgba($gray, 0.1);
-        padding: 2.5rem;
+        padding: 2rem;
         color: $gray;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         height: 6.5rem;
         font-size: 1.2rem;
         line-height: 1.8rem;
@@ -21,6 +21,7 @@ $black: #232326;
             width: 3rem;
             background-repeat: no-repeat;
             background-position: center;
+            transition: 0.6s;
         }
     }
     &-panel {
@@ -43,6 +44,7 @@ $black: #232326;
     background-color: rgba($gray, 0.1);
     color: $gray;
 }
-.custom-select-option.is-selected {
-    display: none;
+.custom-select-container.is-open .custom-select-opener::after { 
+    transform: rotateZ(180deg); 
 }
+
