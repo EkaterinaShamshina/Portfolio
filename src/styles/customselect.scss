@@ -31,14 +31,15 @@ $black: #232326;
         background-color: rgba($gray, 0.1);
         cursor: pointer;
         color: rgba($gray, 0.4);
-        padding-left: 2.5rem;
-        &:last-child {
+        padding-left: 2rem;
+        &:nth-last-child(1){
             padding-bottom: 1.7rem;
         }
     }
 }
 .custom-select-container.is-open .custom-select-panel {
     overflow-y: hidden;
+    max-height: 17.3rem;
 }
 .custom-select-option.has-focus {
     background-color: rgba($gray, 0.1);
@@ -47,4 +48,3 @@ $black: #232326;
 .custom-select-container.is-open .custom-select-opener::after { 
     transform: rotateZ(180deg); 
 }
-

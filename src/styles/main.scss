@@ -514,7 +514,7 @@ body {
             }
         }
         &_contacts {
-            margin-top: 4.3rem;
+            margin-top: 12rem;
             margin-bottom: 0;
             padding-bottom: 6rem;
             border-bottom: 1px solid $gray;
@@ -524,6 +524,7 @@ body {
         }
         &_form {
             padding-bottom: 13rem;
+            margin-top: 4.3rem;
         }
         &_desc {
             max-width: 56rem;
