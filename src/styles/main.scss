@@ -98,7 +98,7 @@ body {
             left: -1rem;
         }
         &:nth-child(1)::before {
-            display: none;
+            opacity: 0;
         }
         &_heading {
             &::before {
