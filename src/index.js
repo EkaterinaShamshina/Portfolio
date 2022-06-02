@@ -12,9 +12,12 @@ customSelect('.mySelect');
 document.addEventListener('DOMContentLoaded', function() {
     // это то модальное окно, с которым и будем работать
     const modal = document.querySelector('#myModal');
+    const buttons = document.querySelectorAll('.js-open-modal')
 
     // назначаем обработчик события для клика по кнопке открытия окна
-    document.querySelector('#myBtn').addEventListener('click', openModal);
+    buttons.forEach(item => {
+        item.addEventListener('click', openModal);
+    })
 
     /*
      * Обработчик события клика по кнопке открытия модального окна
