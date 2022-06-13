@@ -856,23 +856,23 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.order__list li {
+.order__list_li {
   counter-increment: num;
   position: relative;
   margin: 30px 0px 29px 70px;
   padding: 0 0 0 0;
   line-height: 4.2rem;
 }
-.order__list li::before {
+.order__list_li::before {
   content: counter(num) ".";
   position: absolute;
   left: -70px;
   top: 0;
 }
-.order__list li:nth-child(-n+3):before {
+.order__list_li:nth-child(-n+3):before {
   content: "0" counter(num);
 }
-.order__list__item {
+.order__list_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,7 +884,7 @@ header {
           justify-content: space-between;
   border-bottom: 1px solid #F3F2F0;
 }
-.order__list__item p {
+.order__list_item p {
   -ms-flex-preferred-size: 49%;
       flex-basis: 49%;
 }
@@ -911,7 +911,6 @@ header {
 }
 .portfolio-instruments {
   margin-top: 18rem;
-  margin-bottom: 18rem;
 }
 .portfolio-item {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#141416), to(rgba(20, 20, 22, 0)));
@@ -1043,6 +1042,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 18rem;
   margin-bottom: 8rem;
   position: relative;
 }
@@ -1059,6 +1059,7 @@ header {
   height: 9rem;
 }
 .rate-flex__item_contacts {
+  margin-top: 12rem;
   margin-bottom: 0;
   padding-bottom: 6rem;
   border-bottom: 1px solid #F3F2F0;
@@ -1077,10 +1078,6 @@ header {
   margin: 0;
   padding: 6.2rem 0rem;
   border-top: 1px solid #F3F2F0;
-}
-
-.contacts {
-  margin-top: 12rem;
 }
 
 .rate__description {
@@ -1237,24 +1234,24 @@ select:-webkit-autofill:focus {
 /*!************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/tooltip.scss ***!
   \************************************************************************************************************************************************************/
-[tooltip][flow^=down]::before {
+[data-tooltip][data-flow^=down]::before {
   top: 90%;
   border-top-width: 0;
   border-bottom-color: #D40000;
 }
 
-[tooltip][flow^=down]::after {
+[data-tooltip][data-flow^=down]::after {
   top: calc(90% + 5px);
 }
 
-[tooltip][flow^=down]::before,
-[tooltip][flow^=down]::after {
+[data-tooltip][data-flow^=down]::before,
+[data-tooltip][data-flow^=down]::after {
   left: 50%;
   -webkit-transform: translate(-50%, 0.5em);
           transform: translate(-50%, 0.5em);
 }
 
-@-webkit-keyframes tooltips-vert {
+@-webkit-keyframes data-tooltips-vert {
   to {
     opacity: 1;
     -webkit-transform: translate(-50%, 0);
@@ -1262,25 +1259,25 @@ select:-webkit-autofill:focus {
   }
 }
 
-@keyframes tooltips-vert {
+@keyframes data-tooltips-vert {
   to {
     opacity: 1;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
 }
-[tooltip]:not([flow]):hover::before,
-[tooltip]:not([flow]):hover::after,
-[tooltip][flow^=down]:hover::before,
-[tooltip][flow^=down]:hover::after {
-  -webkit-animation: tooltips-vert 300ms ease-out forwards;
-          animation: tooltips-vert 300ms ease-out forwards;
+[data-tooltip]:not([data-flow]):hover::before,
+[data-tooltip]:not([data-flow]):hover::after,
+[data-tooltip][data-flow^=down]:hover::before,
+[data-tooltip][data-flow^=down]:hover::after {
+  -webkit-animation: data-tooltips-vert 300ms ease-out forwards;
+          animation: data-tooltips-vert 300ms ease-out forwards;
 }
 
-[tooltip] {
+[data-tooltip] {
   position: relative;
 }
-[tooltip]::before, [tooltip]::after {
+[data-tooltip]::before, [data-tooltip]::after {
   line-height: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1291,24 +1288,24 @@ select:-webkit-autofill:focus {
   display: none;
   opacity: 0;
 }
-[tooltip]::before {
+[data-tooltip]::before {
   content: "";
   z-index: 1001;
   border: 5px solid transparent;
 }
-[tooltip]::after {
-  content: attr(tooltip);
+[data-tooltip]::after {
+  content: attr(data-tooltip);
   z-index: 1000;
   text-align: center;
   /* 
-  Let the content set the size of the tooltips 
+  Let the content set the size of the data-tooltips 
   but this will also keep them from being obnoxious
   */
   width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overdata-flow: hidden;
+  text-overdata-flow: ellipsis;
   white-space: pre-wrap;
-  /* visible design of the tooltip bubbles */
+  /* visible design of the data-tooltip bubbles */
   padding: 3rem 1.5rem;
   -webkit-box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
           box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
@@ -1318,7 +1315,7 @@ select:-webkit-autofill:focus {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-[tooltip]:hover::before, [tooltip]:hover::after {
+[data-tooltip]:hover::before, [data-tooltip]:hover::after {
   display: block;
 }
 /*!*****************************************************************************************************************************************************************!*\

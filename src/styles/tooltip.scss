@@ -1,34 +1,34 @@
 $red: #D40000;
 $gray: #F3F2F0;
 
-[tooltip][flow^="down"]::before {
+[data-tooltip][data-flow^="down"]::before {
     top: 90%;
     border-top-width: 0;
     border-bottom-color: $red;
   }
-  [tooltip][flow^="down"]::after {
+  [data-tooltip][data-flow^="down"]::after {
     top: calc(90% + 5px);
   }
-  [tooltip][flow^="down"]::before,
-  [tooltip][flow^="down"]::after {
+  [data-tooltip][data-flow^="down"]::before,
+  [data-tooltip][data-flow^="down"]::after {
     left: 50%;
     transform: translate(-50%, .5em);
   }
-@keyframes tooltips-vert {
+@keyframes data-tooltips-vert {
     to {
       opacity: 1;
       transform: translate(-50%, 0);
     }
   }
    
-[tooltip]:not([flow]):hover::before,
-[tooltip]:not([flow]):hover::after,
-[tooltip][flow^="down"]:hover::before,
-[tooltip][flow^="down"]:hover::after {
-    animation: tooltips-vert 300ms ease-out forwards;
+[data-tooltip]:not([data-flow]):hover::before,
+[data-tooltip]:not([data-flow]):hover::after,
+[data-tooltip][data-flow^="down"]:hover::before,
+[data-tooltip][data-flow^="down"]:hover::after {
+    animation: data-tooltips-vert 300ms ease-out forwards;
 }
 
-[tooltip] {
+[data-tooltip] {
   position: relative;
   &::before,
   &::after {
@@ -45,18 +45,18 @@ $gray: #F3F2F0;
       border: 5px solid transparent;
   }
   &::after {
-      content: attr(tooltip);
+      content: attr(data-tooltip);
       z-index: 1000;
       text-align: center;
       /* 
-      Let the content set the size of the tooltips 
+      Let the content set the size of the data-tooltips 
       but this will also keep them from being obnoxious
       */
       width: 70%;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      overdata-flow: hidden;
+      text-overdata-flow: ellipsis;
       white-space: pre-wrap;
-      /* visible design of the tooltip bubbles */
+      /* visible design of the data-tooltip bubbles */
       padding: 3rem 1.5rem;
       box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
       background: $red;

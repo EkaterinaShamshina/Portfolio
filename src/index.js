@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $("body").on('click', '[href*="#"]', function(e){
-    var fixed_offset = 210;
+    var fixed_offset =  $('header').outerHeight();
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
     e.preventDefault();
   });

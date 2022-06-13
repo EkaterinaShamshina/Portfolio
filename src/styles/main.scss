@@ -379,7 +379,7 @@ header {
         font-size: 2.8rem;
         display: flex;
         flex-direction: column;
-        & li {
+        &_li {
             counter-increment: num;
             position: relative;
             margin: 30px 0px 29px 70px;
@@ -422,7 +422,6 @@ header {
     margin-top: 18.2rem;
     &-instruments {
         margin-top: 18rem;
-        margin-bottom: 18rem;
     }
     &-item {
         background-image: $bg-gray;
@@ -524,6 +523,7 @@ header {
     &__item {
         display: flex;
         justify-content: space-between;
+        margin-top: 18rem;
         margin-bottom: 8rem;
         position: relative;
         &:nth-child(even) {
@@ -541,6 +541,7 @@ header {
             }
         }
         &_contacts {
+            margin-top: 12rem;
             margin-bottom: 0;
             padding-bottom: 6rem;
             border-bottom: 1px solid $gray;
@@ -561,9 +562,6 @@ header {
             border-top: 1px solid $gray;
         }
     }
-}
-.contacts {
-    margin-top: 12rem;
 }
 .rate {
     &__description {
