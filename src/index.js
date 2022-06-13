@@ -78,8 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-$("body").on('click', '[href*="#"]', function(e){
-    var fixed_offset = 210;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
-    e.preventDefault();
-  });
+
+
+
+    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+        e.preventDefault();
+        var t = 1000;
+        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+        $('html,body').stop().animate({ scrollTop: $(d).offset().top - 210 }, t);
+        
+    });
