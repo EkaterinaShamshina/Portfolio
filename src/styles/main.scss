@@ -33,12 +33,25 @@ body {
     max-width: 1140px;
     margin: 0 auto;
 }
+.section .active {
+    height: 400px;
+	background: #337AB7;
+	color: #FFF;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    z-index: 3;
+    width: 100%;
+}
 .header {
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: space-between;
-    align-items: center;
-    margin: 4rem auto 6rem;
+    margin: 4.5rem 0 4.5rem;
     &__footer {
         margin-top: 6rem;
         margin-bottom: 3rem;
@@ -49,21 +62,35 @@ body {
         margin: 0;
         list-style-type: none;
         gap: 2.85rem;
+        & li.active {
+            color: $red;
+            transition: 0.2s;
+        }
     }
     &__navigation {
         display: flex;
     }
     &__item {
         cursor: pointer;
+        text-decoration: none;
+        color: $gray;
         &:hover {
             color: $red;
             transition: 0.2s;
         }
     }
 }
+.header-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem auto 3rem;
+}
 .heading {
     border-bottom: 1px solid $gray;
     padding-bottom: 5.5rem;
+    margin-top: 12.8rem;
 }
 .contact {
     display: flex;
@@ -395,6 +422,7 @@ body {
     margin-top: 18.2rem;
     &-instruments {
         margin-top: 18rem;
+        margin-bottom: 18rem;
     }
     &-item {
         background-image: $bg-gray;
@@ -496,7 +524,6 @@ body {
     &__item {
         display: flex;
         justify-content: space-between;
-        margin-top: 18rem;
         margin-bottom: 8rem;
         position: relative;
         &:nth-child(even) {
@@ -514,7 +541,6 @@ body {
             }
         }
         &_contacts {
-            margin-top: 12rem;
             margin-bottom: 0;
             padding-bottom: 6rem;
             border-bottom: 1px solid $gray;
@@ -535,6 +561,9 @@ body {
             border-top: 1px solid $gray;
         }
     }
+}
+.contacts {
+    margin-top: 12rem;
 }
 .rate {
     &__description {
@@ -650,4 +679,3 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
     font-family: $font-inter;
 }
-

@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <title>Документ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body>
     <body>
         <div class="wrapper">
-            <div class="container">
-                <header class="header">
-                    <nav class="header__navigation">
-                        <ul class="header__nav">
-                            <li class="header__item">Обо мне</li>
-                            <li class="header__item">Портфолио</li>
-                            <li class="header__item">Этапы работ</li>
-                            <li class="header__item">Цены</li>
-                            <li class="header__item">Обратная связь</li>
-                        </ul>
-                    </nav>
-                    <div class="contact contact__center">
-                        <a href="tel.:+79237777777" class="contact__link">8 923 777-77-77</a>
-                        <a href="mailto:alexdev@gmail.com" class="contact__link">alexdev@gmail.com</a>
+                <header>
+                    <div class="container">
+                        <div class="header">
+                            <nav class="header__navigation">
+                                <ul class="header__nav">
+                                    <li class="active"><a href="#section-about" class="header__item">Обо мне</a></li>
+                                    <li><a href="#section-portfolio" class="header__item">Портфолио</a></li>
+                                    <li><a href="#section-order" class="header__item">Этапы работ</a></li>
+                                    <li><a href="#section-rate" class="header__item">Цены</a></li>
+                                    <li><a href="#section-contacts" class="header__item">Обратная связь</a></li>
+                                </ul>
+                            </nav>
+                            <div class="contact contact__center">
+                                <a href="tel.:+79237777777" class="contact__link">8 923 777-77-77</a>
+                                <a href="mailto:alexdev@gmail.com" class="contact__link">alexdev@gmail.com</a>
+                            </div>
+                        </div>
                     </div>
                 </header>
+            <div class="container">
                 <div class="heading">
                     <div class="man__cover">
                         <img src="images/man.png" alt="man" class="man__image">
@@ -95,14 +100,14 @@
                             <p class="item-description">Качественное улучшение позиций сайта&#160;в&#160;поисковой выдаче</p>
                         </div>
                     </div>
-                    <div class="about-flex">
+                    <section class="about-flex" id="section-about">
                         <div class="about-flex__item">
                             <p class="item-name item-name_l item-name_uppercase">Обо мне</p>
                         </div>
                         <div class="about-flex__item about-flex__item_description">
                             <p class="description_size-l" >Создаю только эффективные решения, которые работают на результат: от&#160;одностраничных сайтов, до крупных интернет-порталов.</p>
                         </div>
-                    </div>
+                    </section>
                 </section>
                 <div class="quality">
                     <div class="quality-grid">
@@ -124,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="order">
+                <section class="order" id="section-order">
                     <div class="order-grid">
                         <ol class="order__list">
                             <div class="order__list__item">
@@ -141,8 +146,8 @@
                             </div>
                         </ol>
                     </div>
-                </div>
-                <main class="portfolio">
+                </section>
+                <section class="portfolio" id="section-portfolio">
                     <div class="circle circle_3"></div>
                     <h1 class="description-h1 description-h1_portfolio">Портфолио</h1>
                     </div>
@@ -277,7 +282,7 @@ JavaScript-фреймворк с открытым исходным кодом д
                         </div>
                     </div>
                 </main>
-                <main class="rate">
+                <section class="rate" id="section-rate">
                     <div class="container">
                         <div class="rate-flex__item">
                             <div class="rate-flex__item_name">
@@ -362,8 +367,8 @@ JavaScript-фреймворк с открытым исходным кодом д
                         </div>
                     </div>
 
-                </main>
-                <section class="contacts">
+                </section>
+                <section class="contacts" id="section-contacts">
                     <div class="container">
                         <div class="rate-flex__item rate-flex__item_contacts">
                             <div class="rate-flex__item_name">
@@ -407,14 +412,14 @@ JavaScript-фреймворк с открытым исходным кодом д
                 <footer class="footer">
                     <div class="container">
                         <div class="footer__information">
-                            <div class="header header__footer">
+                            <div class="header-footer">
                                 <nav class="header__navigation">
                                     <ul class="header__nav">
-                                        <li class="header__item">Обо мне</li>
-                                        <li class="header__item">Портфолио</li>
-                                        <li class="header__item">Этапы работ</li>
-                                        <li class="header__item">Цены</li>
-                                        <li class="header__item">Обратная связь</li>
+                                        <li><a href="#section-about" class="header__item">Обо мне</a></li>
+                                        <li><a href="#section-portfolio" class="header__item">Портфолио</a></li>
+                                        <li><a href="#section-order" class="header__item">Этапы работ</a></li>
+                                        <li><a href="#section-rate" class="header__item">Цены</a></li>
+                                        <li><a href="#section-contacts" class="header__item">Обратная связь</a></li>
                                     </ul>
                                 </nav>
                                 <div class="contact contact__center">
@@ -431,5 +436,4 @@ JavaScript-фреймворк с открытым исходным кодом д
                 </footer>
         </div>
     </body>
-</body>
 </html>
