@@ -395,7 +395,7 @@ header {
                 content: "0" counter(num);
             }
         }
-        &__item {
+        &_item {
             display: flex;
             align-items: center;
             justify-content: space-between;
