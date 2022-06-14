@@ -110,9 +110,9 @@ header {
         color: $gray;
         display: flex;
         align-items: center;
+        transition: 0.2s;
         &:hover {
             color: $red;
-            transition: 0.2s;
         }
         &::before {
             content: "";
@@ -130,6 +130,10 @@ header {
         &_heading {
             &::before {
                 left: -2.6rem;
+            }
+            &:hover {
+                text-shadow: rgb(252, 249, 249) 1px 1px 0, rgb(244, 235, 235) -1px -1px 0, 
+                     rgb(238, 230, 230) -1px 1px 0, rgb(245, 241, 241) 1px -1px 0;
             }
         }
     }
@@ -185,6 +189,7 @@ header {
         letter-spacing: 0;
         position: relative;
         z-index: 1;
+        margin-bottom: 15rem;
     }
 }
 .project-discussion_btn {
@@ -400,9 +405,8 @@ header {
             align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid $gray;
-            & p {
+            &_description {
                 flex-basis: 49%;
-
             }
         }
     }
@@ -418,8 +422,7 @@ header {
     }
 }
 .portfolio {
-    margin-bottom: 14.5rem;
-    margin-top: 18.2rem;
+    margin-top: 9.2rem;
     &-instruments {
         margin-top: 18rem;
     }
