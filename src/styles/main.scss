@@ -9,6 +9,9 @@ $red: #D40000;
 $white: #FFFFFF;
 $bg-gray: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
 
+$r_desk_hd: 1200px;
+$r_desk: 1000px;
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -22,6 +25,9 @@ body {
     font-family: $font-inter;
     font-size: 1.4rem;
     background-color: $black;
+    @media (max-width: $r_desk_hd) {
+        font-size: calc((100vw - 340px)/(1140 - 340) * (14 - 10) + 10px);
+    }
 }
 .wrapper {
     width: 100%;
@@ -32,6 +38,9 @@ body {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    @media (max-width: $r_desk_hd) {
+        max-width: 95vw;
+    }
 }
 .section .active {
     height: 400px;
@@ -52,6 +61,9 @@ header {
     align-content: center;
     justify-content: space-between;
     margin: 4.5rem 0 4.5rem;
+    @media (max-width: $r_desk) {
+        margin: 2.5rem 0 2.5rem;
+    }
     &__footer {
         margin-top: 6rem;
         margin-bottom: 3rem;
@@ -91,6 +103,9 @@ header {
     border-bottom: 1px solid $gray;
     padding-bottom: 5.5rem;
     margin-top: 12.8rem;
+    @media (max-width: $r_desk) {
+        margin-top: 6.8rem;
+    }
 }
 .contact {
     display: flex;
@@ -104,6 +119,21 @@ header {
         gap: 5.4rem;
         text-transform: capitalize;
         font-size: 1.6rem;
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
+        }
+    }
+    &_form {
+        @media (max-width: $r_desk) {
+            display: none;
+        }
+    }
+    &_tab {
+        display: none;
+        @media (max-width: $r_desk) {
+            display:inherit;
+            margin: 0 auto;
+        }
     }
     &__link {
         text-decoration: none;
@@ -132,8 +162,8 @@ header {
                 left: -2.6rem;
             }
             &:hover {
-                text-shadow: rgb(252, 249, 249) 1px 1px 0, rgb(244, 235, 235) -1px -1px 0, 
-                     rgb(238, 230, 230) -1px 1px 0, rgb(245, 241, 241) 1px -1px 0;
+                text-shadow: $black 1px 1px 0, $black -1px -1px 0, 
+                $black -1px 1px 0, $black 1px -1px 0;
             }
         }
     }
@@ -145,6 +175,9 @@ header {
         position: relative;
         overflow: hidden;
         margin-bottom: 12.5rem;
+        @media (max-width: $r_desk) {
+            margin-bottom: 8.5rem;
+        }
     }
     &__image {
         position: absolute;
@@ -154,6 +187,9 @@ header {
         width: 100%;
         height: 31rem;
         object-fit: cover;
+        @media (max-width: $r_desk) {
+            height: calc((100vw - 340px)/(1140 - 340) * (310 - 215) + 215px);
+        }
     }
     &__description {
         & .description-h3 {
@@ -173,6 +209,9 @@ header {
     font-size: 2.8rem;
     margin: 0;
     font-weight: 400;
+    @media (max-width: $r_desk_hd) {
+        font-size: calc((100vw - 340px)/(1140 - 340) * (28 - 18) + 18px);
+    }
     &_block {
         display: block;
     }
@@ -190,6 +229,9 @@ header {
         position: relative;
         z-index: 1;
         margin-bottom: 15rem;
+    }
+    @media (max-width: $r_desk_hd) {
+        font-size: calc((100vw - 340px)/(1140 - 340) * (74 - 28) + 28px);
     }
 }
 .project-discussion_btn {
@@ -216,6 +258,9 @@ header {
         width: 15px;
         margin-left: 15px;
     }
+    @media (max-width: $r_desk_hd) {
+        font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
+    }
 }
 .triangle {
     background: transparent;
@@ -227,6 +272,12 @@ header {
         bottom: -50px;
         border: 34px solid transparent;
         border-bottom: 70px solid $white;
+        @media (max-width: $r_desk_hd) {
+            left: 0;
+            top: 143px;
+            border: 16px solid transparent;
+            border-bottom: 35px solid $white;
+        }
     }
     &_2 {
         &::after {
@@ -252,6 +303,10 @@ header {
             top: -60px;
             width: 25.4rem;
             height: 25.4rem;
+            @media (max-width: $r_desk_hd) {
+                width: calc((100vw - 340px)/(1140 - 340) * (254 - 135) + 135px);
+                height: calc((100vw - 340px)/(1140 - 340) * (254 - 135) + 135px);
+            }
         }
     }
     &_2 {
@@ -260,6 +315,10 @@ header {
             bottom: -38px;
             width: 10.6rem;
             height: 10.6rem;
+            @media (max-width: $r_desk_hd) {
+                width: calc((100vw - 340px)/(1140 - 340) * (106 - 60) + 60px);
+                height: calc((100vw - 340px)/(1140 - 340) * (106 - 60) + 60px);
+            }
         }
     }
     &_3 {
@@ -269,6 +328,14 @@ header {
             width: 46.5rem;
             height: 46.5rem;
             z-index: 0;
+            @media (max-width: $r_desk_hd) {
+                width: calc((100vw - 340px)/(1140 - 340) * (465 - 197) + 197px);
+                height: calc((100vw - 340px)/(1140 - 340) * (465 - 197) + 197px);
+            }
+            @media (max-width: $r_desk) {
+                right: 0;
+                top: -138px;
+            }
         }
     }
     &_4 {
@@ -285,6 +352,12 @@ header {
             top: -32px;
             width: 30.0rem;
             height: 30.0rem;
+            @media (max-width: $r_desk_hd) {
+                width: calc((100vw - 340px)/(1140 - 340) * (300 - 190) + 190px);
+                height: calc((100vw - 340px)/(1140 - 340) * (300 - 190) + 190px);
+                left: -66px;
+                top: -14px;
+            }
         }
     }
 }
@@ -306,9 +379,15 @@ header {
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
+    @media (max-width: $r_desk_hd) {
+        font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
+    }
     &_l {
         font-size: 2.8rem;
         line-height: 4.1rem;
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (28 - 16) + 16px);
+        }
     }
     &_uppercase {
         text-transform: uppercase;
@@ -331,6 +410,9 @@ header {
     font-size: 4.2rem;
     line-height: 6.3rem;
     margin: 0;
+    @media (max-width: $r_desk_hd) {
+        font-size: calc((100vw - 340px)/(1140 - 340) * (42 - 22) + 22px);
+    }
 }
 .description {
     &_size-l {
@@ -338,12 +420,18 @@ header {
         line-height: 4.1rem;
         opacity: 0.8;
         margin: 0;
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (28 - 16) + 16px);
+        }
     }
     &_size-m {
         font-size: 1.6rem;
         line-height: 2.4rem;
         opacity: 0.8;
         margin: 0;
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
+        }
     }
 }
 .about-flex {
@@ -384,6 +472,9 @@ header {
         font-size: 2.8rem;
         display: flex;
         flex-direction: column;
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (28 - 16) + 16px);
+        }
         &_li {
             counter-increment: num;
             position: relative;
@@ -466,6 +557,14 @@ header {
         padding-top: 18rem;
         padding-bottom: 7.9rem;
         border-bottom: 1px solid $gray;
+        @media (max-width: $r_desk_hd) {
+            padding-top: 12rem;
+            padding-bottom: 6rem;
+        }
+        @media (max-width: $r_desk) {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
         & p {
             max-width: 87rem;
             line-height: 4.2rem;
@@ -508,6 +607,9 @@ header {
             mix-blend-mode: normal;
             border: 1px solid rgba($gray, 1);
         }
+        @media (max-width: $r_desk_hd) {
+            height: calc((100vw - 340px)/(1140 - 340) * (148 - 45) + 45px);
+        }
     }
     &__cover {
         width: 100%;
@@ -520,6 +622,12 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
         object-fit: contain;
+        width: 107px;
+        height: 80px;
+        @media (max-width: $r_desk_hd) {
+            height: calc((100vw - 340px)/(1140 - 340) * (80 - 25) + 25px);
+            width: calc((100vw - 340px)/(1140 - 340) * (107 - 32) + 25px);
+        }
     }
 }
 .rate-flex {
@@ -541,7 +649,15 @@ header {
                 bottom: 14%;
                 width: 9rem;
                 height: 9rem;
+                @media (max-width: $r_desk_hd) {
+                    height: calc((100vw - 340px)/(1140 - 340) * (90 - 40) + 40px);
+                    width: calc((100vw - 340px)/(1140 - 340) * (90 - 40) + 40px);
+                }
             }
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-wrap: wrap;
+            gap: 4rem;
         }
         &_contacts {
             margin-top: 12rem;
@@ -551,18 +667,34 @@ header {
             &::after {
                 display: none;
             }
+            @media (max-width: $r_desk) {
+                flex-direction: column;
+                gap: 4rem;
+                margin-top: 8rem;
+            }
         }
         &_form {
             padding-bottom: 13rem;
             margin-top: 4.3rem;
+            border: none;
+            @media (max-width: $r_desk) {
+                max-width: 70%;
+                margin: 4rem auto 0;
+                padding-bottom: 8rem;
+                gap: 8rem;
+            }
         }
         &_desc {
             max-width: 56rem;
+            @media (max-width: $r_desk) {
+                max-width: 100%;
+            }
         }
         &_price {
             margin: 0;
             padding: 6.2rem 0rem;
             border-top: 1px solid $gray;
+            flex-wrap: nowrap;
         }
     }
 }
@@ -574,6 +706,9 @@ header {
         flex-basis: 34%;
         align-items: flex-start;
         gap: 4.3rem;
+        @media (max-width: $r_desk) {
+            flex-basis: 50%;
+        }
         &_text {
             display: flex;
             flex-direction: column;
@@ -589,6 +724,9 @@ header {
     }
     &__price {
         flex-basis: 49%; 
+        @media (max-width: $r_desk) {
+            flex-basis: 50%;
+        }
     }
 }
 .form {
@@ -602,6 +740,9 @@ header {
         display: block;
         margin-bottom: 1rem;
         opacity: 0.8;
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (12 - 10) + 10px);
+        }
     }
     &__input {
         height: 6.5rem;
@@ -614,6 +755,9 @@ header {
         color: rgba($gray, 1);
         &:focus {
             box-shadow: 0 0 15px rgba($red, 0.5);
+        }
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (12 - 10) + 10px);
         }
     }
     &__button {
@@ -637,6 +781,9 @@ header {
         }
         &:active {
             top: 3px;
+        }
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
         }
     }
 }
@@ -664,6 +811,9 @@ header {
                 }
             }
         }
+        @media (max-width: $r_desk_hd) {
+            font-size: calc((100vw - 340px)/(1140 - 340) * (12 - 10) + 10px);
+        }
     }
 }
 input:-webkit-autofill,
@@ -680,3 +830,4 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
     font-family: $font-inter;
 }
+
