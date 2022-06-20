@@ -1,6 +1,8 @@
 $red: #D40000;
 $gray: #F3F2F0;
 
+$r_tab: 768px;
+
 [data-tooltip][data-flow^="down"]::before {
     top: 90%;
     border-top-width: 0;
@@ -30,6 +32,7 @@ $gray: #F3F2F0;
 
 [data-tooltip] {
   position: relative;
+  
   &::before,
   &::after {
       line-height: 1;
@@ -66,5 +69,8 @@ $gray: #F3F2F0;
   &:hover::before,
   &:hover::after {
       display: block;
+      @media (max-width: $r_tab) {
+        display: none;
+    }   
   }
 }

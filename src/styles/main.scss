@@ -47,6 +47,9 @@ body {
     @media (max-width: $r_desk_hd) {
         max-width: 95vw;
     }
+    @media (max-width: $r_tab) {
+        max-width: 90vw;
+    }
 }
 .section .active {
     height: 400px;
@@ -60,6 +63,9 @@ header {
     background-color: $black;
     z-index: 3;
     width: 100%;
+    @media (max-width: $r_tab) {
+        font-size: 1.4rem;
+    }
 }
 .header {
     display: flex;
@@ -166,6 +172,14 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 6rem auto 3rem;
+    flex-wrap: wrap;
+    & .contact {
+        order: 1;
+    }
+    @media (max-width: $r_tab) {
+        justify-content: center;
+        gap: 3rem;
+    }
 }
 .heading {
     border-bottom: 1px solid $gray;
@@ -245,6 +259,7 @@ header {
         margin-bottom: 12.5rem;
         @media (max-width: $r_desk) {
             margin-bottom: 8.5rem;
+            height: calc((100vw - 340px) / 800 * 95 + 215px);
         }
     }
     &__image {
@@ -285,6 +300,9 @@ header {
     }
     &_rate {
         line-height: 4.1rem;
+        @media (max-width: $r_tab) {
+            line-height: inherit;
+        }
     }
 }
 .description-h1 {
@@ -300,6 +318,9 @@ header {
     }
     @media (max-width: $r_desk_hd) {
         font-size: calc((100vw - 340px)/(1140 - 340) * (74 - 28) + 28px);
+    }
+    @media (max-width: $r_tab) {
+        margin-bottom: 10rem;
     }
 }
 .project-discussion_btn {
@@ -487,7 +508,9 @@ header {
     margin: 0;
     @media (max-width: $r_desk_hd) {
         font-size: calc((100vw - 340px)/(1140 - 340) * (42 - 22) + 22px);
+        line-height: inherit;
     }
+    
 }
 .description {
     &_size-l {
@@ -515,6 +538,9 @@ header {
     margin-top: 18.3rem;
     @media (max-width: $r_desk) {
         margin-top: calc((100vw - 340px)/(1140 - 340) * (183 - 77) + 77px);
+    }
+    @media (max-width: $r_tab) {
+        flex-wrap: wrap;
     }
     &__item {
         &_description {
@@ -572,9 +598,17 @@ header {
                 position: absolute;
                 left: -70px;
                 top: 0;
+                @media (max-width: $r_tab) {
+                    left: -40px;
+                }
             }
             &:nth-child(-n+3):before {
                 content: "0" counter(num);
+            }
+            @media (max-width: $r_tab) {
+                margin: 15px 0px 15px 40px;
+                height: 4rem;
+                line-height: 2.4rem;
             }
         }
         &_item {
@@ -605,7 +639,9 @@ header {
         @media (max-width: $r_desk) {
             margin-top: calc((100vw - 340px)/(1140 - 340) * (180 - 65) + 65px);
         }
-        
+        @media (max-width: $r_tab) {
+            margin-top: 8rem;
+        }   
     }
     &-item {
         background-image: $bg-gray;
@@ -688,6 +724,13 @@ header {
             grid-template-columns: repeat(2,1fr);
             gap: 5rem 5rem;
         }
+        @media (max-width: $r_tab) {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            font-size: 1.2rem;
+            margin-top: 4rem;
+        }
     }
     &-flex {
         display: flex;
@@ -748,6 +791,9 @@ header {
         margin-top: 18rem;
         margin-bottom: 8rem;
         position: relative;
+        @media (max-width: $r_tab) {
+            margin-top: 10rem;
+        }
         &:nth-child(even) {
             &::after {
                 content:''; 
@@ -763,7 +809,7 @@ header {
                 @media (max-width: $r_desk_hd) {
                     height: calc((100vw - 340px)/(1140 - 340) * (90 - 40) + 40px);
                     width: calc((100vw - 340px)/(1140 - 340) * (90 - 40) + 40px);
-                }
+                }   
             }
         }
         @media (max-width: $r_desk_hd) {
@@ -909,6 +955,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__text {
         font-size: 1.2rem;
