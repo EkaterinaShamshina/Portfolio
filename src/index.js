@@ -91,4 +91,8 @@ $("body").on('click', '[href*="#"]', function(e){
         $('.menu__icon, .navigation__tab').toggleClass('active');
         $('body').toggleClass('lock');
     });
-  
+
+    $('.navigation__tab a').on('click', function(e){
+        $('.menu__icon, .navigation__tab').removeClass('active');
+        $('body').removeClass('lock');
+    });

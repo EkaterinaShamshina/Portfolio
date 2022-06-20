@@ -12,6 +12,8 @@ $bg-gray: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
 $r_desk_hd: 1200px;
 $r_desk: 1000px;
 $r_tab: 768px;
+$r_tab_600: 600px;
+$r_tab_430: 430px;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -50,6 +52,7 @@ body {
     @media (max-width: $r_tab) {
         max-width: 90vw;
     }
+    
 }
 .section .active {
     height: 400px;
@@ -77,7 +80,7 @@ header {
         display: none;
     }
     @media (max-width: $r_desk) {
-        margin: 2.5rem 0 2.5rem;
+        margin: 3rem 0 3rem;
     }
     &__footer {
         margin-top: 6rem;
@@ -92,6 +95,9 @@ header {
         & li.active {
             color: $red;
             transition: 0.2s;
+        }
+        @media (max-width: $r_tab_600) {
+            gap: 1.85rem;
         }
         &_tab {
             & a {
@@ -153,7 +159,7 @@ header {
         top: -100%;
         left: 0;
         width: 100%;
-        height: 80%;
+        height: 100%;
         background-color: $black;
         padding: 80px 40px 10px;
         transition: all 0.4s ease 0s;
@@ -172,13 +178,13 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 6rem auto 3rem;
-    flex-wrap: wrap;
     & .contact {
         order: 1;
     }
     @media (max-width: $r_tab) {
         justify-content: center;
         gap: 3rem;
+        flex-direction: column;
     }
 }
 .heading {
@@ -187,6 +193,9 @@ header {
     margin-top: 12.8rem;
     @media (max-width: $r_desk) {
         margin-top: 6.8rem;
+    }
+    @media (max-width: $r_tab_600) {
+        padding-bottom: 3.7rem;
     }
 }
 .contact {
@@ -203,6 +212,9 @@ header {
         font-size: 1.6rem;
         @media (max-width: $r_desk_hd) {
             font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
+        }
+        @media (max-width: $r_tab_600) {
+            gap: 2rem;
         }
     }
     &_form {
@@ -242,6 +254,9 @@ header {
         &_heading {
             &::before {
                 left: -2.6rem;
+                @media (max-width: $r_tab_600) {
+                    left: -1rem;
+                }
             }
             &:hover {
                 text-shadow: $black 1px 1px 0, $black -1px -1px 0, 
@@ -261,6 +276,10 @@ header {
             margin-bottom: 8.5rem;
             height: calc((100vw - 340px) / 800 * 95 + 215px);
         }
+        @media (max-width: $r_tab_600) {
+            height: 23rem;
+            margin-bottom: 6.2rem;
+        }
     }
     &__image {
         position: absolute;
@@ -273,13 +292,20 @@ header {
         @media (max-width: $r_desk) {
             height: calc((100vw - 340px)/(1140 - 340) * (310 - 215) + 215px);
         }
+        @media (max-width: $r_tab_600) {
+            height: 23rem;
+        }
     }
     &__description {
         & .description-h3 {
             margin-bottom: 4rem;
+            @media (max-width: $r_tab_600) {
+                margin-bottom: 2.5rem;
+            }
         }
         & .description-h1 {
-            margin-bottom: 9.9rem;
+            margin-bottom: 9.5rem;
+
         }
     }
     &__contacts {
@@ -322,6 +348,10 @@ header {
     @media (max-width: $r_tab) {
         margin-bottom: 10rem;
     }
+    @media (max-width: $r_tab_600) {
+        font-size: 2.8rem;
+        margin-bottom: 7rem;
+    }
 }
 .project-discussion_btn {
     padding: 0;
@@ -346,6 +376,10 @@ header {
     & img {
         width: 15px;
         margin-left: 15px;
+        @media (max-width: $r_tab_600) {
+            margin-left: 1rem;
+            width: 1rem;
+        }
     }
     @media (max-width: $r_desk_hd) {
         font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
@@ -366,6 +400,10 @@ header {
             top: 143px;
             border: 16px solid transparent;
             border-bottom: 35px solid $white;
+        }
+        @media (max-width: $r_tab_600) {
+            top: 78px;
+            left: 3px;
         }
     }
     &_2 {
@@ -393,8 +431,12 @@ header {
             width: 25.4rem;
             height: 25.4rem;
             @media (max-width: $r_desk_hd) {
-                width: calc((100vw - 340px)/(1140 - 340) * (254 - 135) + 135px);
-                height: calc((100vw - 340px)/(1140 - 340) * (254 - 135) + 135px);
+                width: calc((100vw - 340px)/(1140 - 340) * (254 - 130) + 130px);
+                height: calc((100vw - 340px)/(1140 - 340) * (254 - 130) + 130px);
+            }
+            @media (max-width: $r_tab_600) {
+            left: -51px;
+            top: -28px;
             }
         }
     }
@@ -408,6 +450,10 @@ header {
                 width: calc((100vw - 340px)/(1140 - 340) * (106 - 60) + 60px);
                 height: calc((100vw - 340px)/(1140 - 340) * (106 - 60) + 60px);
             }
+            @media (max-width: $r_tab_600) {
+                right: 31px;
+                bottom: -20px;
+            }  
         }
     }
     &_3 {
@@ -424,6 +470,12 @@ header {
             @media (max-width: $r_desk) {
                 right: 0;
                 top: -138px;
+            }
+            @media (max-width: $r_tab_430) {
+                width: 20rem;
+                height: 20rem;
+                right: 4px;
+                top: -37px;
             }
         }
     }
@@ -457,12 +509,19 @@ header {
     @media (max-width: $r_desk_hd) {
         padding-bottom: calc((100vw - 340px)/(1140 - 340) * (62 - 45) + 45px);
     }
+    @media (max-width: $r_tab_600) {
+        margin-top: 4.3rem;
+        padding-bottom: 4rem;
+    }
     &-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         @media (max-width: $r_desk) {
             grid-template-columns: repeat(2, 1fr);
             gap: 3.3rem 2.7rem;
+        }
+        @media (max-width: $r_tab_600) {
+            gap: 3.5rem 0.9rem;
         }
         &__item {
             display: flex;
@@ -500,6 +559,9 @@ header {
     margin: 0;
     line-height: 2.1rem;
     opacity: 0.8;
+    @media (max-width: $r_tab_600) {
+        line-height: 1.5rem;
+    }
 }
 .item-price {
     font-weight: 700;
@@ -521,6 +583,9 @@ header {
         @media (max-width: $r_desk_hd) {
             font-size: calc((100vw - 340px)/(1140 - 340) * (28 - 16) + 16px);
         }
+        @media (max-width: $r_tab_600) {
+            line-height: 2.4rem;
+        }
     }
     &_size-m {
         font-size: 1.6rem;
@@ -529,6 +594,10 @@ header {
         margin: 0;
         @media (max-width: $r_desk_hd) {
             font-size: calc((100vw - 340px)/(1140 - 340) * (16 - 12) + 12px);
+        }
+        @media (max-width: $r_tab_600) {
+            line-height: 1.8rem;
+            font-size: 1.2rem;
         }
     }
 }
@@ -541,6 +610,10 @@ header {
     }
     @media (max-width: $r_tab) {
         flex-wrap: wrap;
+    }
+    @media (max-width: $r_tab) {
+        margin-top: 6rem;
+        gap: 1rem;
     }
     &__item {
         &_description {
@@ -559,6 +632,10 @@ header {
         padding-bottom: calc((100vw - 340px)/(1140 - 340) * (178 - 65) + 65px);
         display: block;
     }
+    @media (max-width: $r_tab_600) {
+        margin-top: 4rem;
+        padding-bottom: 5.6rem;
+    }
     &-grid {
         display: grid;
         grid-template-columns: 22rem 27rem;
@@ -567,15 +644,24 @@ header {
             grid-template-columns: repeat(2, 1fr);
             gap: 3.3rem 2.7rem;
         }
+        @media (max-width: $r_tab_600) {
+            gap: 2.9rem 0.1rem;
+        }
     }
     &-flex__row {
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
+        @media (max-width: $r_tab_600) {
+            gap: 2rem;
+        }
     }
 }
 .order {
     margin-bottom: 9rem;
+    @media (max-width: $r_tab_430) {
+        margin-bottom: 8rem;
+    }
     &__list {
         list-style: none;
         counter-reset: num; 
@@ -601,6 +687,9 @@ header {
                 @media (max-width: $r_tab) {
                     left: -40px;
                 }
+                @media (max-width: $r_tab) {
+                    left: -27px;
+                }
             }
             &:nth-child(-n+3):before {
                 content: "0" counter(num);
@@ -609,6 +698,9 @@ header {
                 margin: 15px 0px 15px 40px;
                 height: 4rem;
                 line-height: 2.4rem;
+            }
+            @media (max-width: $r_tab_600) {
+                margin: 15px 0px 28px 27px;
             }
         }
         &_item {
@@ -634,6 +726,12 @@ header {
 }
 .portfolio {
     margin-top: 9.2rem;
+    @media (max-width: $r_tab_600) {
+        margin-top: 6rem;
+    }
+    @media (max-width: $r_tab_430) {
+        margin-top: 0;
+    }
     &-instruments {
         margin-top: 18rem;
         @media (max-width: $r_desk) {
@@ -656,6 +754,10 @@ header {
                 flex-direction: column;
                 gap: 4rem;
             }
+            @media (max-width: $r_tab_430) {
+                padding-top: 3.2rem;
+                padding-bottom: 3.3rem;
+            }
         }
         &__description {
             display: flex;
@@ -665,6 +767,12 @@ header {
             @media (max-width: $r_desk) {
                 width: calc((100vw - 340px)/(1140 - 340) * (564 - 320) + 320px);
                 margin: 0 auto;
+            }
+            @media (max-width: $r_tab_600) {
+                margin: 0;
+            }
+            @media (max-width: $r_tab_430) {
+                gap: 1.5rem;
             }
         }
         &__screen {
@@ -682,6 +790,12 @@ header {
             @media (max-width: $r_desk) {
                 height: calc((100vw - 340px)/(1140 - 340) * (315 - 190) + 190px);
             }
+            @media (max-width: $r_tab_600) {
+                height: 34rem;
+            }
+            @media (max-width: $r_tab_430) {
+                height: 20rem;
+            }
         }
         &__image {
             position: absolute;
@@ -693,6 +807,12 @@ header {
             object-fit: contain;
             @media (max-width: $r_desk) {
                 height: calc((100vw - 340px)/(1140 - 340) * (315 - 190) + 190px);
+            }
+            @media (max-width: $r_tab_600) {
+                height: 34rem;
+            }
+            @media (max-width: $r_tab_430) {
+                height: 20rem;
             }
         }
     }
@@ -711,7 +831,16 @@ header {
         & p {
             max-width: 87rem;
             line-height: 4.2rem;
+            @media (max-width: $r_tab_600) {
+                line-height: 2.4rem;
+                font-size: 1.6rem;
+            }
         }
+    }
+}
+.condition-picture {
+    @media (max-width: $r_tab_430) {
+        width: 97%;
     }
 }
 .conditions {
@@ -727,9 +856,9 @@ header {
         @media (max-width: $r_tab) {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 3rem;
             font-size: 1.2rem;
-            margin-top: 4rem;
+            margin-top: 3.5rem;
         }
     }
     &-flex {
@@ -741,6 +870,9 @@ header {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        @media (max-width: $r_tab_430) {
+            gap: 1.7rem;
+        }
     }
 }
 .instruments {
@@ -816,6 +948,9 @@ header {
             flex-wrap: wrap;
             gap: 4rem;
         }
+        @media (max-width: $r_tab_600) {
+            gap: 3rem;
+        }
         &_contacts {
             margin-top: 12rem;
             margin-bottom: 0;
@@ -840,6 +975,12 @@ header {
                 padding-bottom: 8rem;
                 gap: 8rem;
             }
+            @media (max-width: $r_tab_600) {
+                max-width: 100%;
+                padding-bottom: 6rem;
+                gap: 6rem;
+            }
+            
         }
         &_desc {
             max-width: 56rem;
