@@ -516,8 +516,11 @@ header {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+.header__nav_tab a {
+  font-size: 24px;
+}
 @media (max-width: 768px) {
-  .header__nav {
+  .header__nav_tab {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -531,14 +534,14 @@ header {
     width: 100%;
     gap: 0;
   }
-  .header__nav li {
+  .header__nav_tab li {
     text-align: center;
     width: 100%;
     border-bottom: 1px solid rgba(243, 242, 240, 0.2);
     padding-bottom: 20px;
     padding-top: 20px;
   }
-  .header__nav li:nth-child(1) {
+  .header__nav_tab li:nth-child(1) {
     border-top: 1px solid rgba(243, 242, 240, 0.2);
   }
 }
@@ -556,11 +559,6 @@ header {
   color: #D40000;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-@media (max-width: 768px) {
-  .header__item {
-    font-size: 24px;
-  }
 }
 .header_tab {
   display: none;

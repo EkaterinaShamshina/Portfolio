@@ -87,20 +87,25 @@ header {
             color: $red;
             transition: 0.2s;
         }
-        @media (max-width: $r_tab) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            gap: 0;
-            & li {
-                text-align: center;
+        &_tab {
+            & a {
+                font-size: 24px;
+            }
+            @media (max-width: $r_tab) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
-                border-bottom: 1px solid rgba($gray, 0.2);
-                padding-bottom: 20px;
-                padding-top: 20px;
-                &:nth-child(1) {
-                    border-top: 1px solid rgba($gray, 0.2);
+                gap: 0;
+                & li {
+                    text-align: center;
+                    width: 100%;
+                    border-bottom: 1px solid rgba($gray, 0.2);
+                    padding-bottom: 20px;
+                    padding-top: 20px;
+                    &:nth-child(1) {
+                        border-top: 1px solid rgba($gray, 0.2);
+                    }
                 }
             }
         }
@@ -115,9 +120,6 @@ header {
         &:hover {
             color: $red;
             transition: 0.2s;
-        }
-        @media (max-width: $r_tab) {
-            font-size: 24px;
         }
     }
     &_tab {
@@ -973,6 +975,7 @@ header {
         }
     }
 }
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
