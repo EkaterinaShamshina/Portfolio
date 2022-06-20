@@ -11,6 +11,7 @@ $bg-gray: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
 
 $r_desk_hd: 1200px;
 $r_desk: 1000px;
+$r_tab: 768px;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -27,6 +28,11 @@ body {
     background-color: $black;
     @media (max-width: $r_desk_hd) {
         font-size: calc((100vw - 340px)/(1140 - 340) * (14 - 10) + 10px);
+    }
+    &.lock {
+        @media (max-width: $r_tab) {
+        overflow: hidden;
+        }
     }
 }
 .wrapper {
@@ -61,6 +67,9 @@ header {
     align-content: center;
     justify-content: space-between;
     margin: 4.5rem 0 4.5rem;
+    @media (max-width: $r_tab) {
+        display: none;
+    }
     @media (max-width: $r_desk) {
         margin: 2.5rem 0 2.5rem;
     }
@@ -78,6 +87,23 @@ header {
             color: $red;
             transition: 0.2s;
         }
+        @media (max-width: $r_tab) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 0;
+            & li {
+                text-align: center;
+                width: 100%;
+                border-bottom: 1px solid rgba($gray, 0.2);
+                padding-bottom: 20px;
+                padding-top: 20px;
+                &:nth-child(1) {
+                    border-top: 1px solid rgba($gray, 0.2);
+                }
+            }
+        }
     }
     &__navigation {
         display: flex;
@@ -89,6 +115,46 @@ header {
         &:hover {
             color: $red;
             transition: 0.2s;
+        }
+        @media (max-width: $r_tab) {
+            font-size: 24px;
+        }
+    }
+    &_tab {
+        display: none;
+        @media (max-width: $r_tab) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        & .header__navigation {
+            width: 100%;
+        }
+    }
+}
+.navigation__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &.active {
+        top: 0;
+    }
+    @media (max-width: $r_tab) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-color: $black;
+        padding: 80px 40px 10px;
+        transition: all 0.4s ease 0s;
+        overflow: auto;
+    }
+    & .contact {
+        font-size: 14px;
+        &_heading {
+            font-size: 12px;
         }
     }
 }
@@ -365,9 +431,16 @@ header {
     margin-top: 6.4rem;
     border-bottom: 1px solid $gray;
     padding-bottom: 6.2rem;
+    @media (max-width: $r_desk_hd) {
+        padding-bottom: calc((100vw - 340px)/(1140 - 340) * (62 - 45) + 45px);
+    }
     &-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        @media (max-width: $r_desk) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.3rem 2.7rem;
+        }
         &__item {
             display: flex;
             flex-direction: column;
@@ -438,6 +511,9 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 18.3rem;
+    @media (max-width: $r_desk) {
+        margin-top: calc((100vw - 340px)/(1140 - 340) * (183 - 77) + 77px);
+    }
     &__item {
         &_description {
             flex-basis: 56rem;
@@ -451,10 +527,18 @@ header {
     margin-top: 6.2rem;
     border-bottom: 1px solid $gray;
     padding-bottom: 17.8rem;
+    @media (max-width: $r_desk) {
+        padding-bottom: calc((100vw - 340px)/(1140 - 340) * (178 - 65) + 65px);
+        display: block;
+    }
     &-grid {
         display: grid;
         grid-template-columns: 22rem 27rem;
         gap: 6.3rem 7rem;
+        @media (max-width: $r_desk) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.3rem 2.7rem;
+        }
     }
     &-flex__row {
         display: flex;
@@ -516,6 +600,10 @@ header {
     margin-top: 9.2rem;
     &-instruments {
         margin-top: 18rem;
+        @media (max-width: $r_desk) {
+            margin-top: calc((100vw - 340px)/(1140 - 340) * (180 - 65) + 65px);
+        }
+        
     }
     &-item {
         background-image: $bg-gray;
@@ -526,22 +614,36 @@ header {
             padding-top: 6.2rem;
             padding-bottom: 5.8rem;
             border-bottom: 1px solid $gray;
+            @media (max-width: $r_desk) {
+                flex-direction: column;
+                gap: 4rem;
+            }
         }
         &__description {
             display: flex;
             flex-direction: column;
             gap: 4rem;
             justify-content: center;
+            @media (max-width: $r_desk) {
+                width: calc((100vw - 340px)/(1140 - 340) * (564 - 320) + 320px);
+                margin: 0 auto;
+            }
         }
         &__screen {
             display: flex;
             flex-basis: 56rem;
+            @media (max-width: $r_desk) {
+                flex-basis: 100%;
+            }
         }
         &__cover {
             width: 100%;
             height: 31.5rem;
             position: relative;
             overflow: hidden;
+            @media (max-width: $r_desk) {
+                height: calc((100vw - 340px)/(1140 - 340) * (315 - 190) + 190px);
+            }
         }
         &__image {
             position: absolute;
@@ -551,6 +653,9 @@ header {
             width: 100%;
             height: 31.5rem;
             object-fit: contain;
+            @media (max-width: $r_desk) {
+                height: calc((100vw - 340px)/(1140 - 340) * (315 - 190) + 190px);
+            }
         }
     }
     &-action {
@@ -577,6 +682,10 @@ header {
         grid-template-columns: repeat(3,1fr);
         gap: 8rem 2rem;
         margin-top: 8rem;
+        @media (max-width: $r_desk) {
+            grid-template-columns: repeat(2,1fr);
+            gap: 5rem 5rem;
+        }
     }
     &-flex {
         display: flex;
@@ -816,6 +925,55 @@ header {
         }
     }
 }
+
+.menu__icon {
+    display: none;
+    @media (max-width: $r_tab) {
+        display: block;
+        z-index: 5;
+        position: relative;
+        width: 26px;
+        height: 20px;
+        cursor: pointer;
+        &::after,
+        &::before,
+        & span {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.4s ease 0s;
+            background-color: $gray;
+        }
+        &::after,
+        &::before {
+            content: "";
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        & span {
+            top: 50%;
+        }
+        &.active {
+            &::before {
+                transform: rotate(45deg);
+                top: 45%;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 45%;
+            }
+            & span {
+                transform: scale(0);
+            }
+        }
+    }
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,

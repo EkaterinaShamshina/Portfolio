@@ -5,6 +5,7 @@ import './styles/customselect.scss';
 import './styles/modal.scss';
 
 import customSelect from 'custom-select';
+import { fn } from 'jquery';
 
 customSelect('.mySelect');
 
@@ -78,9 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+//Плавный скролл
 $("body").on('click', '[href*="#"]', function(e){
     var fixed_offset =  $('header').outerHeight();
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
     e.preventDefault();
   });
+
+//Бургер-меню
+    $('.menu__icon').on('click', function(e){
+        $('.menu__icon, .navigation__tab').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
   
