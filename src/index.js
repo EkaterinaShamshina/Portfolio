@@ -79,14 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-$('.project-discussion_btn').on('click', function(e){
-    $('body').toggleClass('lock');
-});
-
-$('.close, .form__button,').on('click', function(e){
-    $('body').removeClass('lock');
-});
-
 //Плавный скролл
 $("body").on('click', '[href*="#"]', function(e){
     var fixed_offset =  $('header').outerHeight();
@@ -102,5 +94,13 @@ $("body").on('click', '[href*="#"]', function(e){
 
     $('.navigation__tab a').on('click', function(e){
         $('.menu__icon, .navigation__tab').removeClass('active');
+        $('body').removeClass('lock');
+    });
+
+    $('.project-discussion_btn').on('click', function(e){
+        $('body').toggleClass('lock');
+    });
+    
+    $('.close, .form__button,').on('click', function(e){
         $('body').removeClass('lock');
     });
