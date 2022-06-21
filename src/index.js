@@ -96,3 +96,12 @@ $("body").on('click', '[href*="#"]', function(e){
         $('.menu__icon, .navigation__tab').removeClass('active');
         $('body').removeClass('lock');
     });
+
+
+    $('.project-discussion_btn').on('click', function(e){
+        $('body').toggleClass('lock');
+    });
+
+    $('.close, .form__button, .modal').on('click', function(e){
+        $('body').removeClass('lock');
+    });

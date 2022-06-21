@@ -157,6 +157,9 @@ header {
     &.active {
         top: 0;
     }
+    & nav.header__navigation {
+        order: 0;
+    }
     @media (max-width: $r_tab) {
         position: fixed;
         top: -100%;
@@ -297,7 +300,8 @@ header {
         transform: translate(-50%, -50%);
         width: 100%;
         height: 31rem;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         @media (max-width: $r_desk) {
             height: calc((100vw - 340px)/(1140 - 340) * (310 - 215) + 215px);
         }
@@ -824,7 +828,8 @@ header {
             transform: translate(-50%, -50%);
             width: 100%;
             height: 31.5rem;
-            object-fit: contain;
+            -o-object-fit: contain;
+               object-fit: contain;
             @media (max-width: $r_desk) {
                 height: calc((100vw - 340px)/(1140 - 340) * (315 - 190) + 190px);
             }
@@ -931,7 +936,8 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
         width: 107px;
         height: 80px;
         @media (max-width: $r_desk_hd) {
@@ -1216,7 +1222,7 @@ header {
             bottom: 0;
         }
         & span {
-            top: 50%;
+            top: calc(50% - 1px);
         }
         &.active {
             &::before {
@@ -1246,6 +1252,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
   -webkit-text-fill-color: rgba($gray, 1);
+    -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
     font-family: $font-inter;
 }

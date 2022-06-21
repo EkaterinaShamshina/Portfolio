@@ -1,6 +1,9 @@
 $black: #232326;
 $gray: #F3F2F0;
 
+$r_tab_600: 600px;
+$r_tab: 768px;
+
 .modal {
     display: none;
     position: fixed;
@@ -20,8 +23,21 @@ $gray: #F3F2F0;
     margin: 15% auto;
     padding: 20px 20px 40px;
     border: none;
-    width: 80%;
-    max-width: 600px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -300px;
+    @media (max-width: $r_tab) {
+        width: 500px;
+        margin: -250px 0 0 -250px;
+    }
+    @media (max-width: $r_tab_600) {
+        width: 100%;
+        margin: -300px 0 0 -50%;
+        padding: 60px 10px;
+    }
 
 }
 .close {
