@@ -431,10 +431,8 @@ body {
     font-size: calc((100vw - 340px) / 800 * 4 + 10px);
   }
 }
-@media (max-width: 768px) {
-  body.lock {
-    overflow: hidden;
-  }
+body.lock {
+  overflow: hidden;
 }
 
 .wrapper {
