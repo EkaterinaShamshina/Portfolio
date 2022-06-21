@@ -1,6 +1,8 @@
 $gray: #F3F2F0;
 $black: #232326;
 
+$r_tab_430: 430px;
+
 .custom-select {
     &-opener {
         background-color: rgba($gray, 0.1);
@@ -13,7 +15,11 @@ $black: #232326;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        @media (max-width: $r_tab_430) {
+            height: 5.5rem;
+            font-size: 1rem;
+            margin-bottom: 2.8rem;
+        }
         &::after {
             content: '';
             display: inline-block;
