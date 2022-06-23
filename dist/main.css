@@ -1705,7 +1705,6 @@ header {
 @media (max-width: 430px) {
   .instruments-item {
     height: 4.4rem;
-    mix-blend-mode: normal;
   }
 }
 .instruments__cover {
