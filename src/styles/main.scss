@@ -97,6 +97,9 @@ header {
         @media (max-width: $r_tab_600) {
             gap: 1.85rem;
         }
+        @media (max-width: $r_tab_430) {
+            gap: 6.5px;
+        }
         &_tab {
             & a {
                 font-size: 24px;
@@ -171,6 +174,9 @@ header {
     }
     & .contact {
         font-size: 14px;
+        @media (max-width: $r_tab_430) {
+            font-size: 12px;
+        }
         &_heading {
             font-size: 12px;
         }
@@ -226,6 +232,9 @@ header {
         @media (max-width: $r_tab_600) {
             gap: 2rem;
         }
+        @media (max-width: $r_tab_430) {
+            gap: 1rem;
+        }
     }
     &_form {
         @media (max-width: $r_desk) {
@@ -266,6 +275,9 @@ header {
                 left: -2.6rem;
                 @media (max-width: $r_tab_600) {
                     left: -1rem;
+                }
+                @media (max-width: $r_tab_430) {
+                    left: -0.5rem;
                 }
             }
             &:hover {
@@ -316,7 +328,6 @@ header {
         }
         & .description-h1 {
             margin-bottom: 9.5rem;
-
         }
     }
     &__contacts {
@@ -364,6 +375,9 @@ header {
         font-size: 2.8rem;
         margin-bottom: 7rem;
     }
+    @media (max-width: $r_tab_430) {
+        font-size: 2.5rem;
+    }
 }
 .project-discussion_btn {
     padding: 0;
@@ -389,7 +403,7 @@ header {
         width: 15px;
         margin-left: 15px;
         @media (max-width: $r_tab_600) {
-            margin-left: 1rem;
+            margin-left: 0.5rem;
             width: 1rem;
         }
     }
@@ -618,6 +632,9 @@ header {
             line-height: 1.8rem;
             font-size: 1.2rem;
         }
+        @media (max-width: $r_tab_430) {
+            font-size: 1.1rem;
+        }
     }
 }
 .about-flex {
@@ -666,6 +683,9 @@ header {
         @media (max-width: $r_tab_600) {
             gap: 2.9rem 0.1rem;
         }
+        @media (max-width: $r_tab_430) {
+            gap: 2.4rem 0.2rem;
+        }
     }
     &-flex__row {
         display: flex;
@@ -706,7 +726,7 @@ header {
                 @media (max-width: $r_tab) {
                     left: -40px;
                 }
-                @media (max-width: $r_tab) {
+                @media (max-width: $r_tab_430) {
                     left: -27px;
                 }
             }
@@ -721,6 +741,9 @@ header {
             @media (max-width: $r_tab_600) {
                 margin: 15px 0px 28px 27px;
             }
+            @media (max-width: $r_tab_430) {
+                font-size: 1.3rem;
+            }
         }
         &_item {
             display: flex;
@@ -729,6 +752,9 @@ header {
             border-bottom: 1px solid $gray;
             &_description {
                 flex-basis: 49%;
+                @media (max-width: $r_tab_430) {
+                    flex-basis: 37%;
+                }
             }
         }
     }
@@ -922,6 +948,7 @@ header {
         }
         @media (max-width: $r_tab_430) {
             height: 4.4rem;
+            mix-blend-mode: normal;
         }
     }
     &__cover {
@@ -974,7 +1001,7 @@ header {
                     width: calc((100vw - 340px)/(1140 - 340) * (90 - 40) + 40px);
                 }   
                 @media (max-width: $r_tab_430) {
-                    left: 43%;
+                    left: 47%;
                     bottom: 12%;
                     width: 4rem;
                     height: 4rem;
